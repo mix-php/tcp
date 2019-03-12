@@ -1,13 +1,13 @@
 <?php
 
-namespace Mix\WebSocket;
+namespace Mix\Tcp;
 
 use Mix\Core\Component\ComponentInterface;
 use Mix\Core\Component\AbstractComponent;
 
 /**
  * Class Registry
- * @package Mix\WebSocket
+ * @package Mix\Tcp
  * @author LIUJIAN <coder.keda@gmail.com>
  */
 class Registry extends AbstractComponent
