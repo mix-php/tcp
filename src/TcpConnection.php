@@ -56,6 +56,15 @@ class TcpConnection extends AbstractComponent
     }
 
     /**
+     * 获取客户端信息
+     * @return array|bool
+     */
+    public function getClientInfo()
+    {
+        return $this->server->getClientInfo($this->fd);
+    }
+
+    /**
      * 关闭连接
      * @param bool $reset
      */
