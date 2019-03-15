@@ -63,7 +63,7 @@ class Error extends AbstractComponent
         $message = "{$errors['message']}" . PHP_EOL;
         $message .= "[type] {$errors['type']} [code] {$errors['code']}" . PHP_EOL;
         $message .= "[file] {$errors['file']} [line] {$errors['line']}" . PHP_EOL;
-        $message .= "[trace] {$errors['trace']}" . PHP_EOL;
+        $message .= "[trace] {$errors['trace']}";
         // 写入
         $errorType = \Mix\Core\Error::getType($errors['code']);
         switch ($errorType) {
