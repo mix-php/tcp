@@ -5,11 +5,11 @@ namespace Mix\Tcp\Handler;
 use Mix\Tcp\TcpConnection;
 
 /**
- * Interface HandlerInterface
+ * Interface TcpHandlerInterface
  * @package Mix\Tcp\Handler
  * @author LIUJIAN <coder.keda@gmail.com>
  */
-interface HandlerInterface
+interface TcpHandlerInterface
 {
 
     /**
