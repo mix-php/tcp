@@ -4,6 +4,7 @@ namespace Mix\Tcp;
 
 use Mix\Core\Component\ComponentInterface;
 use Mix\Core\Component\AbstractComponent;
+use Mix\Tcp\Handler\TcpHandlerInterface;
 
 /**
  * Class Registry
@@ -21,16 +22,19 @@ class Registry extends AbstractComponent
 
     /**
      * 处理者
-     * @var \Mix\Tcp\Handler\HandlerInterface
+     * @var \Mix\Tcp\Handler\TcpHandlerInterface
      */
     public $handler;
 
     /**
      * 获取处理器
-     * @return \Mix\Tcp\Handler\HandlerInterface
+     * @return TcpHandlerInterface
      */
     public function getHandler()
     {
+        if (!($this->handler instanceof TcpHandlerInterface)) {
+            throw new \RuntimeException("{$handlerClass} type is not 'Mix\Tcp\Handler\TcpHandlerInterface'");
+        }
         return $this->handler;
     }
 
