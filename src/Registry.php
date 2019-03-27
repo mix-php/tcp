@@ -9,7 +9,7 @@ use Mix\Tcp\Handler\TcpHandlerInterface;
 /**
  * Class Registry
  * @package Mix\Tcp
- * @author LIUJIAN <coder.keda@gmail.com>
+ * @author liu,jian <coder.keda@gmail.com>
  */
 class Registry extends AbstractComponent
 {

@@ -9,7 +9,7 @@ use Mix\Helper\JsonHelper;
 /**
  * Class Error
  * @package Mix\Tcp
- * @author LIUJIAN <coder.keda@gmail.com>
+ * @author liu,jian <coder.keda@gmail.com>
  */
 class Error extends AbstractComponent
 {

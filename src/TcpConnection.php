@@ -8,7 +8,7 @@ use Mix\Core\Component\ComponentInterface;
 /**
  * Class TcpConnection
  * @package Mix\Tcp
- * @author LIUJIAN <coder.keda@gmail.com>
+ * @author liu,jian <coder.keda@gmail.com>
  */
 class TcpConnection extends AbstractComponent
 {

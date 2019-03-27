@@ -7,7 +7,7 @@ use Mix\Tcp\TcpConnection;
 /**
  * Interface TcpHandlerInterface
  * @package Mix\Tcp\Handler
- * @author LIUJIAN <coder.keda@gmail.com>
+ * @author liu,jian <coder.keda@gmail.com>
  */
 interface TcpHandlerInterface
 {
