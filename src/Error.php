@@ -34,7 +34,7 @@ class Error extends AbstractComponent
     {
         // 错误参数定义
         $statusCode = $e instanceof \Mix\Exception\NotFoundException ? 404 : 500;
-        $errors = [
+        $errors     = [
             'status'  => $statusCode,
             'code'    => $e->getCode(),
             'message' => $e->getMessage(),
@@ -60,13 +60,15 @@ class Error extends AbstractComponent
     protected static function log($errors)
     {
         // 构造消息
-        $message = "{$errors['message']}" . PHP_EOL;
-        $message .= "[type] {$errors['type']} [code] {$errors['code']}" . PHP_EOL;
-        $message .= "[file] {$errors['file']} [line] {$errors['line']}" . PHP_EOL;
-        $message .= "[trace] {$errors['trace']}";
+        $message = <<<EOL
+{message}
+[type] {type} [code] {code}
+[file] {file} [line] {line}
+[trace] {trace}
+EOL;
         // 写入
-        $errorType = \Mix\Core\Error::getType($errors['code']);
-        switch ($errorType) {
+        $level = \Mix\Core\Error::getLevel($errors['code']);
+        switch ($level) {
             case 'error':
                 \Mix::$app->log->error($message);
                 break;
@@ -89,7 +91,7 @@ class Error extends AbstractComponent
             return;
         }
         $errors['trace'] = explode("\n", $errors['trace']);
-        $statusCode = $errors['status'];
+        $statusCode      = $errors['status'];
         if (!\Mix::$app->appDebug) {
             if ($statusCode == 404) {
                 $errors = [
