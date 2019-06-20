@@ -2,8 +2,6 @@
 
 namespace Mix\Tcp;
 
-use Mix\Core\Application\ComponentInitializeTrait;
-
 /**
  * Class Application
  * @package Mix\Tcp
@@ -11,8 +9,6 @@ use Mix\Core\Application\ComponentInitializeTrait;
  */
 class Application extends \Mix\Core\Application
 {
-
-    use ComponentInitializeTrait;
 
     /**
      * 执行连接
