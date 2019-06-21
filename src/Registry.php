@@ -2,7 +2,7 @@
 
 namespace Mix\Tcp;
 
-use Mix\Core\Component\ComponentInterface;
+use Mix\Component\ComponentInterface;
 use Mix\Component\AbstractComponent;
 use Mix\Tcp\Handler\TcpHandlerInterface;
 

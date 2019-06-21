@@ -3,7 +3,7 @@
 namespace Mix\Tcp;
 
 use Mix\Component\AbstractComponent;
-use Mix\Core\Component\ComponentInterface;
+use Mix\Component\ComponentInterface;
 
 /**
  * Class TcpConnection
